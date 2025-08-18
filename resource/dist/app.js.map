@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": ["../js/app.js"],
-  "sourcesContent": ["console.log(\"[app.js]\");\n"],
-  "mappings": "MAAA,QAAQ,IAAI,UAAU",
-  "names": []
+  "sources": ["../js/Product.js", "../js/app.js"],
+  "sourcesContent": ["export default class Product {\n    constructor(name, price) {\n        this._name = name;\n        this._price = price;\n    }\n\n    show() {\n        console.log(`${this._name}\uC758 \uAC00\uACA9\uC740 ${this._price}\uC785\uB2C8\uB2E4!!!`);\n    }\n\n    info() {\n        console.log(this);\n    }\n}\n", "import Product from './Product';\n\nconsole.log(\"[app.js]\");\n\nconst p = new Product('\uC0BC\uC131', 23); \nconsole.log(p);\n"],
+  "mappings": "MAAA,IAAqBA,EAArB,KAA6B,CACzB,YAAYC,EAAMC,EAAO,CACrB,KAAK,MAAQD,EACb,KAAK,OAASC,CAClB,CAEA,MAAO,CACH,QAAQ,IAAI,GAAG,KAAK,KAAK,6BAAS,KAAK,MAAM,uBAAQ,CACzD,CAEA,MAAO,CACH,QAAQ,IAAI,IAAI,CACpB,CACJ,ECXA,QAAQ,IAAI,UAAU,EAEtB,IAAMC,EAAI,IAAIC,EAAQ,eAAM,EAAE,EAC9B,QAAQ,IAAID,CAAC",
+  "names": ["Product", "name", "price", "p", "Product"]
 }

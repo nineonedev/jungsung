@@ -3,7 +3,7 @@
 @use "sass:meta";
 @use "./variables" as var;
 
-@mixin mq($key-or-size, $direction: "max") {
+@mixin mq($key-or-size, $direction: "max") { 
     $breakpoints: var.$breakpoints;
 
     @if (meta.type-of($key-or-size) == "string") {
