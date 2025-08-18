@@ -1,0 +1,160 @@
+@use "../abstract" as *;
+
+/* === Display === */
+.no-display-xs {
+    font-size: var(--display-xs-fs);
+    font-weight: var(--display-xs-fw);
+    line-height: var(--display-xs-lh);
+}
+.no-display-sm {
+    font-size: var(--display-sm-fs);
+    font-weight: var(--display-sm-fw);
+    line-height: var(--display-sm-lh);
+}
+.no-display-md {
+    font-size: var(--display-md-fs);
+    font-weight: var(--display-md-fw);
+    line-height: var(--display-md-lh);
+}
+.no-display-lg {
+    font-size: var(--display-lg-fs);
+    font-weight: var(--display-lg-fw);
+    line-height: var(--display-lg-lh);
+}
+.no-display-xl {
+    font-size: var(--display-xl-fs);
+    font-weight: var(--display-xl-fw);
+    line-height: var(--display-xl-lh);
+}
+
+/* === Heading === */
+.no-heading-xs {
+    font-size: var(--heading-xs-fs);
+    font-weight: var(--heading-xs-fw);
+    line-height: var(--heading-xs-lh);
+}
+.no-heading-sm {
+    font-size: var(--heading-sm-fs);
+    font-weight: var(--heading-sm-fw);
+    line-height: var(--heading-sm-lh);
+}
+.no-heading-md {
+    font-size: var(--heading-md-fs);
+    font-weight: var(--heading-md-fw);
+    line-height: var(--heading-md-lh);
+}
+.no-heading-lg {
+    font-size: var(--heading-lg-fs);
+    font-weight: var(--heading-lg-fw);
+    line-height: var(--heading-lg-lh);
+}
+.no-heading-xl {
+    font-size: var(--heading-xl-fs);
+    font-weight: var(--heading-xl-fw);
+    line-height: var(--heading-xl-lh);
+}
+
+/* === Body === */
+.no-body-xs {
+    font-size: var(--body-xs-fs);
+    font-weight: var(--body-xs-fw);
+    line-height: var(--body-xs-lh);
+}
+.no-body-sm {
+    font-size: var(--body-sm-fs);
+    font-weight: var(--body-sm-fw);
+    line-height: var(--body-sm-lh);
+}
+.no-body-md {
+    font-size: var(--body-md-fs);
+    font-weight: var(--body-md-fw);
+    line-height: var(--body-md-lh);
+} /* 기본 본문 */
+.no-body-lg {
+    font-size: var(--body-lg-fs);
+    font-weight: var(--body-lg-fw);
+    line-height: var(--body-lg-lh);
+}
+.no-body-xl {
+    font-size: var(--body-xl-fs);
+    font-weight: var(--body-xl-fw);
+    line-height: var(--body-xl-lh);
+}
+
+/* === Section spacing (padding-y) === */
+.no-section-xs {
+    padding-top: var(--section-xs);
+    padding-bottom: var(--section-xs);
+}
+.no-section-sm {
+    padding-top: var(--section-sm);
+    padding-bottom: var(--section-sm);
+}
+.no-section-md {
+    padding-top: var(--section-md);
+    padding-bottom: var(--section-md);
+}
+.no-section-lg {
+    padding-top: var(--section-lg);
+    padding-bottom: var(--section-lg);
+}
+.no-section-xl {
+    padding-top: var(--section-xl);
+    padding-bottom: var(--section-xl);
+}
+
+/* === Border Radius === */
+.no-radius-xs {
+    border-radius: var(--radius-xs);
+}
+.no-radius-sm {
+    border-radius: var(--radius-sm);
+}
+.no-radius-md {
+    border-radius: var(--radius-md);
+}
+.no-radius-lg {
+    border-radius: var(--radius-lg);
+}
+.no-radius-xl {
+    border-radius: var(--radius-xl);
+}
+.no-radius-round {
+    border-radius: var(--radius-round);
+}
+
+@each $key, $value in $breakpoints {
+    .no-container-#{$key} {
+        max-width: #{$value}px;
+        width: 100%;
+        margin: 0 auto;
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+    }
+}
+
+// === Margin Utilities ===
+@each $key, $value in $spacings {
+    .no-mg-#{$key} {
+        margin: #{$value};
+    }
+
+    @each $dKey, $dVal in $directions {
+        .no-mg-#{$key}--#{$dKey} {
+            margin-#{$dVal}: #{$value};
+        }
+    }
+}
+
+// === Padding Utilities ===
+@each $key, $value in $spacings {
+    .no-pd-#{$key} {
+        padding: #{$value};
+    }
+
+    @each $dKey, $dVal in $directions {
+        .no-pd-#{$key}--#{$dKey} {
+            padding-#{$dVal}: #{$value};
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use "../abstract" as *;
+
+@font-face {
+    font-family: "Noto Sans KR";
+    src: local("Noto Sans KR Bold"), url("#{$FONT_DIR}/NotoSansKR-Bold.woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    src: local("Noto Sans KR SemiBold"),
+        url("#{$FONT_DIR}/NotoSansKR-SemiBold.woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    src: local("Noto Sans KR Medium"),
+        url("#{$FONT_DIR}/NotoSansKR-Medium.woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    src: local("Noto Sans KR Regular"),
+        url("#{$FONT_DIR}/NotoSansKR-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    src: local("Noto Sans KR Light"), url("#{$FONT_DIR}/NotoSansKR-Light.woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

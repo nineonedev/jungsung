@@ -1,0 +1,48 @@
+:root {
+    /* === base === */
+    --clr-base-white: #fff;
+    --clr-base-black: #000;
+
+    /* === primary === */
+    --clr-primary-50: #e4f1fb;
+    --clr-primary-100: #bddbf6;
+    --clr-primary-200: #95c5f0;
+    --clr-primary-300: #6fafe8;
+    --clr-primary-400: #559ee4;
+    --clr-primary-500: #428edf;
+    --clr-primary-600: #3d81d2;
+    --clr-primary-700: #366fbf;
+    --clr-primary-800: #305fad;
+    --clr-primary-900: #26418d;
+
+    /* === primary === */
+    --clr-gray-50: #f7f7f7;
+    --clr-gray-100: #ececec;
+    --clr-gray-200: #e0e0e0;
+    --clr-gray-300: #cccccc;
+    --clr-gray-400: #a7a7a7;
+    --clr-gray-500: #868686;
+    --clr-gray-600: #5f5f5f;
+    --clr-gray-700: #4c4c4c;
+    --clr-gray-800: #2f2f2f;
+    --clr-gray-900: #0e0e0e;
+
+    /* === common === */
+    --clr-common-background: var(--clr-base-white);
+    --clr-common-on-background: var(--clr-base-black);
+
+    /* === text === */
+    --clr-text-primary: var(--clr-gray-900);
+    --clr-text-secondary: var(--clr-gray-500);
+    --clr-text-tertiary: var(--clr-gray-400);
+
+    /* === background === */
+    --clr-background-paper: var(--clr-base-white);
+    --clr-background-primary: var(--clr-gray-50);
+    --clr-background-secondary: var(--clr-primary-50);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    }
+}

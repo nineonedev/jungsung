@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "php": "php -S localhost:3001",
+        "build": "node build.js",
+        "watch": "node build.js --watch"
+    },
+    "devDependencies": {
+        "esbuild": "^0.25.9",
+        "esbuild-sass-plugin": "^3.3.1"
+    }
+}

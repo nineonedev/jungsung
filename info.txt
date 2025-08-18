@@ -1,0 +1,9 @@
+Favicon 생성 사이트
+https://realfavicongenerator.net/
+
+Color Palette Generator 사이트
+https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+
+Font Converter
+https://anyconv.com/ttf-to-woff2-converter/

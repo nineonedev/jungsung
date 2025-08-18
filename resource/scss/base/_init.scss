@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--clr-background-primary);
+    color: var(--clr-text-primary);
+    font-family: var(--family-base);
+    font-size: var(--body-md-fs);
+    font-weight: var(--body-md-fw);
+    line-height: var(--body-md-lh);
+    word-break: keep-all;
+}
+
+::selection {
+    background: var(--clr-base-green);
+    color: var(--clr-base-yellow);
+}
+
+::-webkit-scrollbar {
+    background-color: var(--clr-base-yellow);
+    width: 0.8rem;
+}
+::-webkit-scrollbar-thumb {
+    border: 1px solid var(--clr-text-primary);
+    background-color: var(--clr-base-white);
+}
+
+a,
+button,
+select,
+input,
+textarea,
+option {
+    color: var(--clr-text-primary);
+    font-family: var(--family-base);
+    font-size: fluid(14, 16);
+    line-height: 1.15;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+label {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+input,
+textarea,
+select,
+option {
+    border: none;
+    outline: none;
+}

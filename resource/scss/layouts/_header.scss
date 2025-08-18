@@ -1,0 +1,47 @@
+@use '../abstract' as *; 
+
+.no-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--clr-background-primary);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+
+    &__inner {
+        height: var(--header-height);
+        @include flex-center(); 
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {}
+
+    &__gnb {
+        display: flex;
+    }
+    
+    &__gnb-item {}
+    
+    &__gnb-link {}
+    
+    &__gnb-label {}
+    
+    &__submenu {}
+    
+    &__lnb {
+        display: none;
+    }
+    
+    &__lnb-item {}
+    
+    &__lnb-link {}
+    
+    &__lnb-label {}
+}

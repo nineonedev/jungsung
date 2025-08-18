@@ -1,0 +1,54 @@
+{
+    "site_name": "정성종합관리",
+    "pages": [
+        {
+            "title": "회사소개",
+            "dirname": "about",
+            "pages": [
+                { "title": "대표인사말", "filename": "ceo-message" },
+                { "title": "회사연혁", "filename": "history" },
+                { "title": "경영이념", "filename": "philosophy" },
+                { "title": "오시는길", "filename": "location" }
+            ]
+        },
+        {
+            "title": "사업영역",
+            "dirname": "services",
+            "pages": [
+                {
+                    "title": "시설관리",
+                    "filename": "facility-management",
+                    "isHash": true
+                },
+                {
+                    "title": "미화관리서비스",
+                    "filename": "cleaning-services",
+                    "isHash": true
+                },
+                {
+                    "title": "경비용역서비스",
+                    "filename": "security-services",
+                    "isHash": true
+                },
+                {
+                    "title": "관리단설립",
+                    "filename": "management-foundation",
+                    "isHash": true
+                }
+            ]
+        },
+        {
+            "title": "관리실적",
+            "dirname": "portfolio",
+            "pages": [{ "title": "관리실적", "filename": "cases" }]
+        },
+        {
+            "title": "고객센터",
+            "dirname": "support",
+            "pages": [
+                { "title": "공지사항", "filename": "notices" },
+                { "title": "자료실", "filename": "resources" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+@use "./functions" as func;
+
+:root {
+    /* === Section spacing (섹션 상·하단 패딩) === */
+    --section-xs: #{func.fluid(24, 48)};
+    --section-sm: #{func.fluid(32, 64)};
+    --section-md: #{func.fluid(48, 96)};
+    --section-lg: #{func.fluid(64, 128)};
+    --section-xl: #{func.fluid(96, 160)};
+
+    /* === Border Radius (유동 반경) === */
+    --radius-xs: #{func.fluid(2, 4)};
+    --radius-sm: #{func.fluid(4, 8)};
+    --radius-md: #{func.fluid(8, 16)};
+    --radius-lg: #{func.fluid(12, 24)};
+    --radius-xl: #{func.fluid(16, 32)};
+    --radius-round: 9999px;
+
+    /* === Spacing (마진·패딩 기본 단위, fluid 적용) === */
+    --spacing-xxs: #{func.fluid(2, 4)};
+    --spacing-xs: #{func.fluid(4, 8)};
+    --spacing-sm: #{func.fluid(6, 12)};
+    --spacing-md: #{func.fluid(8, 16)};
+    --spacing-lg: #{func.fluid(12, 24)};
+    --spacing-xl: #{func.fluid(16, 32)};
+    --spacing-2xl: #{func.fluid(24, 48)};
+    --spacing-3xl: #{func.fluid(32, 64)};
+}
