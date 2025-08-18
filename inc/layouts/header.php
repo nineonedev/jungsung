@@ -1,9 +1,9 @@
 <header id="main-header" class="no-header">
     <div class="no-header__inner">
         <div class="no-header__container no-container-xl">
-            <div class="no-header__logo">
+            <a href="/" class="no-header__logo">
                 <img src="/resource/images/meta/logo-primary.png" alt="정성종합관리(주)">
-            </div>
+            </a>
             <nav class="no-header__nav">
                 <?php if ($MENU_ITEMS) : ?>
                 <ul class="no-header__gnb">
