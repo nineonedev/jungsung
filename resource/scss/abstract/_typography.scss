@@ -4,11 +4,11 @@
     --family-noto-sans-kr: "Noto Sans KR";
 
     /* === Display (히어로/대제목) === */
-    --display-xs-fs: #{func.fluid(32, 40)};
-    --display-sm-fs: #{func.fluid(40, 48)};
-    --display-md-fs: #{func.fluid(56, 64)};
-    --display-lg-fs: #{func.fluid(72, 96)};
-    --display-xl-fs: #{func.fluid(96, 128)};
+    --display-xs-fs: #{func.fluid(32, 64)};
+    --display-sm-fs: #{func.fluid(36, 72)};
+    --display-md-fs: #{func.fluid(40, 88)};
+    --display-lg-fs: #{func.fluid(48, 128)};
+    --display-xl-fs: #{func.fluid(64, 188)};
 
     --display-xs-lh: 1.25;
     --display-sm-lh: 1.2;
@@ -23,11 +23,11 @@
     --display-xl-fw: 700;
 
     /* === Heading (섹션 타이틀) === */
-    --heading-xs-fs: #{func.fluid(20, 22)};
-    --heading-sm-fs: #{func.fluid(24, 28)};
-    --heading-md-fs: #{func.fluid(28, 32)};
-    --heading-lg-fs: #{func.fluid(32, 40)};
-    --heading-xl-fs: #{func.fluid(40, 48)};
+    --heading-xs-fs: #{func.fluid(16, 24)};
+    --heading-sm-fs: #{func.fluid(18, 28)};
+    --heading-md-fs: #{func.fluid(20, 32)};
+    --heading-lg-fs: #{func.fluid(24, 40)};
+    --heading-xl-fs: #{func.fluid(28, 48)};
 
     --heading-xs-lh: 1.25;
     --heading-sm-lh: 1.25;
@@ -43,10 +43,10 @@
 
     /* === Body (본문/UI 텍스트) === */
     --body-xs-fs: #{func.fluid(12, 14)};
-    --body-sm-fs: #{func.fluid(14, 16)};
-    --body-md-fs: #{func.fluid(16, 18)}; /* 기본 본문 */
-    --body-lg-fs: #{func.fluid(18, 20)};
-    --body-xl-fs: #{func.fluid(20, 22)};
+    --body-sm-fs: #{func.fluid(13, 16)};
+    --body-md-fs: #{func.fluid(14, 18)}; /* 기본 본문 */
+    --body-lg-fs: #{func.fluid(15, 20)};
+    --body-xl-fs: #{func.fluid(16, 22)};
 
     --body-xs-lh: 1.6;
     --body-sm-lh: 1.6;

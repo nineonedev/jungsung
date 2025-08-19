@@ -7,8 +7,9 @@
     right: 0;
     width: 100%;
     height: var(--header-height);
-    background: var(--clr-background-primary);
+    background: var(--clr-background-paper);
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    z-index: var(--header-z-index);
 
     &__inner {
         height: var(--header-height);
@@ -29,7 +30,15 @@
     
     &__gnb-item {}
     
-    &__gnb-link {}
+    &__gnb-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem fluid(16, 32);
+        height: var(--header-height);
+        font-weight: 500;
+        font-size: var(--body-md-fs);
+    }
     
     &__gnb-label {}
     

@@ -1,0 +1,114 @@
+@use '../abstract' as *; 
+
+.no-footer {
+    background: var(--clr-gray-900);
+    color: var(--clr-base-white);
+
+    /* === Top === */
+    
+    &__top {
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(16, 56);
+    }
+
+    &__menus {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+    }
+
+    &__div {    
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: 2.4rem;
+
+        @include mq(lg){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__logo {
+        max-width: 20rem;
+    }
+
+    &__call {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    &__address {
+        @include mq(md){
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        dl {
+            display: inline-flex;
+            gap: 0.4rem;
+            color: var(--clr-gray-400);
+            font-size: var(--body-sm-fs);
+
+            @extend %info-detail;
+
+            @include mq(md) {
+                display: flex;
+                padding-right: 0;
+                margin-right: 0;
+
+                &::before {
+                    content: none;
+                };
+            }
+            
+
+            dt {}
+
+            dd {}
+        }
+    }
+
+    /* === Bottom === */
+    
+    &__bottom {
+        color: var(--clr-gray-400);
+        border: 1px solid var(--clr-gray-800);
+    }
+
+    &__rights {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.4rem;
+
+        @include mq(md){
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+
+    &__copy {
+        font-size: var(--body-sm-fs);
+    }
+
+    &__legal {
+        display: flex;
+        align-items: center;
+
+        a {
+            color: var(--clr-base-white);
+            font-weight: 500;
+            
+            @extend %info-detail;
+
+            &:hover{
+                color: var(--clr-primary-300);
+            }
+        }
+    }
+}

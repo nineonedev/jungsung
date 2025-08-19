@@ -1,4 +1,13 @@
 @use "sass:math";
+@use './variables' as var; 
+
+@function image-url($path){
+    @return url("#{var.$IMAGE_DIR}/#{$path}");
+}
+
+@function font-url($path){
+    @return url("#{var.$FONT_DIR}/#{$path}");
+}
 
 @function fluid($y1, $y2, $x1: 375, $x2: 1920) {
     // font-size: clamp([min]rem, [v]vw + [r]rem, [max]rem);

@@ -6,6 +6,7 @@ const ENTRY_POINTS = {
 };
 
 const OUT_DIR = "resource/dist";
+const PUBLIC_PATH = "/resource/dist";
 
 /* === Bootstrap === */
 
@@ -79,7 +80,6 @@ const reporter = {
     const ctx = await esbuild.context({
         entryPoints: ENTRY_POINTS,
         entryNames: "[name]",
-        assetNames: "fonts/[name]-[hash]",
         chunkNames: "[name]",
         bundle: true,
         outdir: OUT_DIR,
@@ -87,11 +87,22 @@ const reporter = {
         loader: {
             ".woff": "file",
             ".woff2": "file",
+            ".jpg": "file",
+            ".jpeg": "file",
+            ".png": "file",
+            ".gif": "file",
+            ".svg": "file",
         },
+        assetNames: "assets/[name]-[hash]", 
+        external: [
+            "/resource/images/*",
+            "/resource/fonts/*",
+        ],
+        publicPath: PUBLIC_PATH,
         sourcemap: true,
         minify: true,
         metafile: true,
-        logLevel: "silent", // ← 기본 로그 숨김 (우리가 예쁘게 출력)
+        logLevel: "silent",
     });
 
     if (isWatch) {

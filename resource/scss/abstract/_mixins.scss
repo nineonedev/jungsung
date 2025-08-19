@@ -2,6 +2,7 @@
 @use "sass:math";
 @use "sass:meta";
 @use "./variables" as var;
+@use './functions' as func; 
 
 @mixin mq($key-or-size, $direction: "max") { 
     $breakpoints: var.$breakpoints;
@@ -63,14 +64,6 @@
     overflow: hidden;
 }
 
-@mixin pos-center() {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 @mixin line-clamp($line) {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -101,3 +94,32 @@
     @include pos-center();
     background: rgba(0, 0, 0, $opacity);
 }
+
+
+
+
+@mixin font-face($family, $local, $font-url, $weight){
+    @font-face {
+        font-family: #{$family};
+        src: local($local), func.font-url($font-url);
+        font-weight: #{$weight};
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+@mixin font-face-variant($family, $file, $weight, $local: null) {
+    $suffix: map.get(var.$font-weight-suffix, $weight);
+    $local-name: if($local == null, "#{$family} #{$suffix}", $local);
+    @include font-face($family, $local-name, $file, $weight);
+}
+
+@mixin font-face-thin($family, $file, $local: null)       { @include font-face-variant($family, $file, 100, $local); }
+@mixin font-face-extralight($family, $file, $local: null) { @include font-face-variant($family, $file, 200, $local); }
+@mixin font-face-light($family, $file, $local: null)      { @include font-face-variant($family, $file, 300, $local); }
+@mixin font-face-regular($family, $file, $local: null)    { @include font-face-variant($family, $file, 400, $local); }
+@mixin font-face-medium($family, $file, $local: null)     { @include font-face-variant($family, $file, 500, $local); }
+@mixin font-face-semibold($family, $file, $local: null)   { @include font-face-variant($family, $file, 600, $local); }
+@mixin font-face-bold($family, $file, $local: null)       { @include font-face-variant($family, $file, 700, $local); }
+@mixin font-face-extrabold($family, $file, $local: null)  { @include font-face-variant($family, $file, 800, $local); }
+@mixin font-face-black($family, $file, $local: null)      { @include font-face-variant($family, $file, 900, $local); }

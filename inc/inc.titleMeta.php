@@ -1,32 +1,33 @@
 <?
-	// $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === true ? 'https://' : 'http://';
+	$protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === true ? 'https://' : 'http://';
 
-	// $NO_STATIC_TITLE							= $SITEINFO_TITLE;
-	// $NO_META_KEYWORDS							= $SITEINFO_META_KEYWORDS;
-	// $NO_META_DESCRIPTION						= $SITEINFO_META_DESCRIPTION;
-	// $NO_META_URL								= $protocol.$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
-	// $NO_META_TWITTER_CARD						= "Summary";
-	// $NO_META_TWITTER_URL						= $protocol.$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
-	// $NO_META_TWITTER_TITLE						= $NO_STATIC_TITLE;
-	// $NO_META_TWITTER_DESCRIPTION				= $NO_META_DESCRIPTION;
-	// $NO_META_TWITTER_IMAGE						= $NO_IS_SUBDIR."/uploads/meta/".$SITEINFO_META_THUMB;
-	// $NO_META_OG_URL								= $protocol.$_SERVER['HTTP_HOST'];
-	// $NO_META_OG_TYPE							= "website";
-	// $NO_META_OG_IMAGE							= $NO_META_OG_URL."/uploads/meta/".$SITEINFO_META_THUMB;
-	// $NO_META_OG_SITE_NAME						= $NO_STATIC_TITLE;
-	// $NO_META_OG_LOCALE							= "ko";
-	// $NO_META_OG_TITLE							= $NO_STATIC_TITLE;
-	// $NO_META_OG_DESCRIPTION						= $NO_META_DESCRIPTION;
-	// $NO_META_OG_COUNTRY_NAME					= "";
-	// $NO_META_ITEMPROP_NAME						= $NO_STATIC_TITLE;
-	// $NO_META_ITEMPROP_IMAGE						= "";							
-	// $NO_META_ITEMPROP_URL						= $protocol.$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
-	// $NO_META_ITEMPROP_DESCRIPTION				= $NO_META_DESCRIPTION;
-	// $NO_META_ITEMPROP_KEYWORD					= $NO_META_KEYWORDS;
-	// $NO_META_SHORTCUT_ICON						= $NO_IS_SUBDIR."/uploads/meta/".$SITEINFO_META_FAVICON_ICO;
-	// $NO_META_APPLE_THOUCH_ICON					= "";
+	$SITEINFO_META_THUMB						= '';
+	$NO_STATIC_TITLE							= $SITEINFO_TITLE ?? '';
+	$NO_META_KEYWORDS							= $SITEINFO_META_KEYWORDS ?? '';
+	$NO_META_DESCRIPTION						= $SITEINFO_META_DESCRIPTION ?? '';
+	$NO_META_URL								= $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	$NO_META_TWITTER_CARD						= "Summary";
+	$NO_META_TWITTER_URL						= $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	$NO_META_TWITTER_TITLE						= $NO_STATIC_TITLE ?? '';
+	$NO_META_TWITTER_DESCRIPTION				= $NO_META_DESCRIPTION ?? '';
+	$NO_META_TWITTER_IMAGE						= $NO_IS_SUBDIR ?? ''."/uploads/meta/".$SITEINFO_META_THUMB ?? '';
+	$NO_META_OG_URL								= $protocol.$_SERVER['HTTP_HOST'];
+	$NO_META_OG_TYPE							= "website";
+	$NO_META_OG_IMAGE							= $NO_META_OG_URL."/uploads/meta/".$SITEINFO_META_THUMB ?? '';
+	$NO_META_OG_SITE_NAME						= $NO_STATIC_TITLE;
+	$NO_META_OG_LOCALE							= "ko";
+	$NO_META_OG_TITLE							= $NO_STATIC_TITLE;
+	$NO_META_OG_DESCRIPTION						= $NO_META_DESCRIPTION;
+	$NO_META_OG_COUNTRY_NAME					= "";
+	$NO_META_ITEMPROP_NAME						= $NO_STATIC_TITLE;
+	$NO_META_ITEMPROP_IMAGE						= "";							
+	$NO_META_ITEMPROP_URL						= $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	$NO_META_ITEMPROP_DESCRIPTION				= $NO_META_DESCRIPTION;
+	$NO_META_ITEMPROP_KEYWORD					= $NO_META_KEYWORDS;
+	$NO_META_SHORTCUT_ICON						= $NO_IS_SUBDIR ?? ''."/uploads/meta/".$SITEINFO_META_FAVICON_ICO;
+	$NO_META_APPLE_THOUCH_ICON					= "";
 
-	$FAVICON_PATH = ROOT.'/resource/images/favicon';
+	$FAVICON_PATH = '/resource/images/favicon';
 ?>
 
 <title><?=$PAGE_TITLE?></title>

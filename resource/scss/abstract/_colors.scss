@@ -1,4 +1,26 @@
 :root {
+    /* === primary === */
+    --clr-primary-main: var(--clr-primary-900); 
+    --clr-primary-hover: var(--clr-primary-800);
+
+    /* === common === */
+    --clr-common-background: var(--clr-base-white);
+    --clr-common-on-background: var(--clr-base-black);
+
+    /* === text === */
+    --clr-text-primary: var(--clr-gray-900);
+    --clr-text-secondary: var(--clr-gray-500);
+    --clr-text-tertiary: var(--clr-gray-400);
+
+    /* === background === */
+    --clr-background-paper: var(--clr-base-white);
+    --clr-background-primary: var(--clr-gray-50);
+    --clr-background-secondary: var(--clr-primary-50);
+    --clr-background-philo: var(--clr-gray-100);
+}
+
+
+:root {
     /* === base === */
     --clr-base-white: #fff;
     --clr-base-black: #000;
@@ -26,20 +48,6 @@
     --clr-gray-700: #4c4c4c;
     --clr-gray-800: #2f2f2f;
     --clr-gray-900: #0e0e0e;
-
-    /* === common === */
-    --clr-common-background: var(--clr-base-white);
-    --clr-common-on-background: var(--clr-base-black);
-
-    /* === text === */
-    --clr-text-primary: var(--clr-gray-900);
-    --clr-text-secondary: var(--clr-gray-500);
-    --clr-text-tertiary: var(--clr-gray-400);
-
-    /* === background === */
-    --clr-background-paper: var(--clr-base-white);
-    --clr-background-primary: var(--clr-gray-50);
-    --clr-background-secondary: var(--clr-primary-50);
 }
 
 @media (prefers-color-scheme: dark) {

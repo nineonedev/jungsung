@@ -1,3 +1,5 @@
+@use '../abstract' as *; 
+
 * {
     margin: 0;
     padding: 0;
@@ -14,28 +16,22 @@ html {
 }
 
 body {
-    background: var(--clr-background-primary);
-    color: var(--clr-text-primary);
-    font-family: var(--family-base);
-    font-size: var(--body-md-fs);
-    font-weight: var(--body-md-fw);
-    line-height: var(--body-md-lh);
-    word-break: keep-all;
+    @extend %base;
+    background: var(--clr-background-paper);
 }
 
 ::selection {
-    background: var(--clr-base-green);
-    color: var(--clr-base-yellow);
+    background: var(--clr-primary-main);
+    color: var(--clr-base-white);
 }
 
-::-webkit-scrollbar {
-    background-color: var(--clr-base-yellow);
-    width: 0.8rem;
-}
-::-webkit-scrollbar-thumb {
-    border: 1px solid var(--clr-text-primary);
-    background-color: var(--clr-base-white);
-}
+// ::-webkit-scrollbar {
+//     background-color: var(--clr-base-yellow);
+//     width: 0.8rem;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background-color: var(--clr-base-white);
+// }
 
 a,
 button,
@@ -43,10 +39,8 @@ select,
 input,
 textarea,
 option {
-    color: var(--clr-text-primary);
-    font-family: var(--family-base);
-    font-size: fluid(14, 16);
-    line-height: 1.15;
+    @extend %base; 
+    font-size: var(--body-sm-fs);
 }
 
 ul,

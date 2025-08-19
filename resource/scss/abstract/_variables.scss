@@ -1,12 +1,14 @@
-$FONT_DIR: "../fonts" !default;
+$FONT_DIR: "/resource/fonts" !default;
+$IMAGE_DIR: "/resource/images" !default;
 
 $breakpoints: (
     3xl: 1920,
     2xl: 1640,
     xl: 1320,
-    md: 1024,
-    sm: 768,
-    xs: 544,
+    lg: 1024,
+    md: 768,
+    sm: 544,
+    xs: 450,
     xxs: 375,
 );
 
@@ -19,6 +21,8 @@ $spacings: (
     xl: var(--spacing-xl),
     2xl: var(--spacing-2xl),
     3xl: var(--spacing-3xl),
+    4xl: var(--spacing-4xl),
+    5xl: var(--spacing-5xl),
 );
 
 $directions: (
@@ -26,4 +30,16 @@ $directions: (
     r: right,
     t: top,
     b: bottom,
+);
+
+$font-weight-suffix: (
+    100: "Thin",
+    200: "ExtraLight",
+    300: "Light",
+    400: "Regular",
+    500: "Medium",
+    600: "SemiBold",
+    700: "Bold",
+    800: "ExtraBold",
+    900: "Black"
 );

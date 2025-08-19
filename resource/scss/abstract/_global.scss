@@ -1,5 +1,15 @@
+@use './mixins' as *; 
+
 :root {
     --gutter: 2.4rem;
 
     --header-height: 10rem;
+    --header-z-index: 1000;
+
+    --sub-nav-height: 7rem;  
+
+    @include mq(md){
+        --header-height: 8rem; 
+        --sub-nav-height: 5.6rem;
+    }
 }

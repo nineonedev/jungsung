@@ -7,3 +7,20 @@
         height: 100dvh;
     }
 }
+
+
+.--wrap {
+    * br {
+        @include mq(md){
+            display: none;
+        }
+    }
+}
+
+.--blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

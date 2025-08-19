@@ -1,0 +1,70 @@
+@use '../abstract' as *; 
+
+
+.no-btn {
+    @extend %button;
+    font-weight: 500;
+    font-size: var(--body-md-fs);
+
+    span {
+        font-weight: inherit;
+    }
+
+    .fa-arrow-right {
+        transform: rotate(-45deg);
+        padding-top: 0.2rem;
+        color: inherit;
+        font-weight: inherit;
+    }
+
+    &--sm {
+        padding: 0.8rem 1.6rem; 
+    }
+
+    &--md {
+        padding: 1.2rem 2.4rem; 
+    }
+
+    &--lg {
+        padding: 1.6rem 3.2rem; 
+    }
+
+    /* === Theme === */
+
+    &--primary {
+        background: var(--clr-primary-main);
+        color: var(--clr-base-white);
+
+        &:hover {
+            background: var(--clr-primary-hover);
+        } 
+    }
+
+    &--primary-outline {
+        border: 2px solid var(--clr-primary-main);
+        color: var(--clr-primary-main);
+
+        &:hover {
+            background: var(--clr-primary-50);
+            color: var(--clr-primary-main);;
+        } 
+    }
+
+    &--white-primary {
+        background: var(--clr-base-white);
+        color: var(--clr-primary-main);
+
+        &:hover {
+            background: var(--clr-primary-50);
+        }
+    }
+
+    &--white-outline {
+        border: 2px solid var(--clr-base-white);
+        color: var(--clr-base-white);
+
+        &:hover {
+            background: rgba(255,255,255,0.1);
+        } 
+    }
+}
