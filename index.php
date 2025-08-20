@@ -254,7 +254,7 @@
                                 <span>정성의 손길이 닿은 곳</span>
                             </div>
                             <div class="no-main-pofol__num">
-                                <em>125</em>
+                                <em class="no-fm-manrope">125</em>
                                 <i>+</i>
                             </div>
                         </div>
@@ -398,7 +398,7 @@
                                 <li class="no-main-notice__item">
                                     <a href="" class="no-main-notice__link">
                                         <div class="no-main-notice__date">
-                                            <span class="no-heading-md"><?= date('d',  $timestamp)?></span>
+                                            <span class="no-heading-md no-fm-manrope"><?= date('d',  $timestamp)?></span>
                                             <small><?= date('y. m', $timestamp) ?></small>
                                         </div>
                                         <h3 class="no-main-notice__label no-body-xl">

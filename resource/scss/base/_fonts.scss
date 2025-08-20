@@ -1,7 +1,15 @@
 @use "../abstract" as *;
 
-@include font-face-light    ("Noto Sans KR", "NotoSansKR-Light.woff2");
-@include font-face-regular  ("Noto Sans KR", "NotoSansKR-Regular.woff2");
-@include font-face-medium   ("Noto Sans KR", "NotoSansKR-Medium.woff2");
-@include font-face-semibold ("Noto Sans KR", "NotoSansKR-SemiBold.woff2");
-@include font-face-bold     ("Noto Sans KR", "NotoSansKR-Bold.woff2");
+@include font-face-light    ("Noto_Sans_KR", "Noto Sans KR", "NotoSansKR-Light.woff2");
+@include font-face-regular  ("Noto_Sans_KR", "Noto Sans KR", "NotoSansKR-Regular.woff2");
+@include font-face-medium   ("Noto_Sans_KR", "Noto Sans KR", "NotoSansKR-Medium.woff2");
+@include font-face-semibold ("Noto_Sans_KR", "Noto Sans KR", "NotoSansKR-SemiBold.woff2");
+@include font-face-bold     ("Noto_Sans_KR", "Noto Sans KR", "NotoSansKR-Bold.woff2");
+
+
+@include font-face-regular  ("Nanum_Pen_Script", "Nanum Pen Script", "NanumPenScript-Regular.woff2");
+
+@include font-face-regular  ("Manrope", "Manrope", "Manrope-Regular.woff2");
+@include font-face-medium   ("Manrope", "Manrope", "Manrope-Medium.woff2");
+@include font-face-semibold ("Manrope", "Manrope", "Manrope-SemiBold.woff2");
+@include font-face-bold     ("Manrope", "Manrope", "Manrope-Bold.woff2");

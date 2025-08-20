@@ -444,6 +444,14 @@
         @include img-auto-cover(115%); 
         order: 2;
 
+        &--case {
+            @include img-auto-cover(100%);
+            
+            @include mq(md){
+                @include img-auto-cover(75%);
+            }
+        }
+
         img {
             transition: .3s ease-in-out;
         }

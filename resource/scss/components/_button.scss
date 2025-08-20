@@ -4,7 +4,7 @@
 .no-btn {
     @extend %button;
     font-weight: 500;
-    font-size: var(--body-md-fs);
+    font-size: var(--body-sm-fs);
 
     span {
         font-weight: inherit;
@@ -23,10 +23,12 @@
 
     &--md {
         padding: 1.2rem 2.4rem; 
+        font-size: var(--body-md-fs);
     }
 
     &--lg {
         padding: 1.6rem 3.2rem; 
+        font-size: var(--body-md-fs);
     }
 
     /* === Theme === */

@@ -1,0 +1,354 @@
+@use '../abstract' as *; 
+
+
+.no-ceo-msg { 
+    &__div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: fluid(64, 128);
+
+        @include mq(md){
+            grid-template-columns: 1fr;
+            gap: 4.8rem;
+        }
+    }
+
+    &__content {
+        font-size: fluid(20, 28);
+    }
+
+    &__desc{
+        padding-top: fluid(32, 64);
+    }
+
+    &__sign {
+        padding-top: fluid(32, 64);
+        font-size: fluid(20, 28);
+        display: flex;
+        justify-content: space-between;
+        gap: 2.4rem;
+    }
+
+    &__signature {
+        max-width: fluid(100, 160);
+        width: 100%;
+    }
+
+    &__image {
+        @include mq(md){
+            @include img-auto-cover(75%)
+        }
+    }
+}
+
+
+.no-history {
+    &__body {
+        padding-top: var(--section-xl);
+    }
+
+    &__div {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(64, 128);
+    }
+
+    &__image {
+        @include img-auto-cover(36.25%);
+
+        @include mq(md){
+            padding-bottom: 56.25%;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        padding-top: fluid(24, 48);
+
+        @include mq(md){
+            grid-template-columns: 1fr;
+            gap: fluid(24, 48);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--clr-base-black);
+    }
+
+    &__item {
+        display: flex;
+        padding: 1.2rem 0;
+        border-bottom: 1px solid var(--clr-gray-300);
+    }
+
+    &__year {
+        width: 8rem;
+        display: inline-block;
+        font-weight: 700;
+    }
+
+    &__month {
+        width: 4rem;
+        display: inline-block;
+    }
+
+    &__label {
+        color: var(--clr-gray-700);
+        flex: 1;
+    }
+}
+
+.no-philo-intro{
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.4rem;
+
+        @include mq(lg){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq(md){
+            gap: 1.2rem;
+        }
+    }
+
+    &__item {}
+
+    &__icon {
+        @include flex-center(); 
+        width: fluid(85, 140);
+        height: fluid(85, 140);
+        border-radius: 50%;
+        background: var(--clr-base-white);
+        margin: 0 auto;
+
+        lord-icon {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    &__box {
+        height: 100%;
+        background: var(--clr-gray-50);
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        padding: fluid(24, 48);
+    }
+
+    &__lang {
+        font-weight: 500;
+        color: var(--clr-primary-main);
+        padding-top: 1.6rem;
+    }
+}
+
+.no-philo-service {
+    position: relative;
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__background {
+        @include pos-center();
+
+        img {
+            @include pos-center(); 
+            object-fit: cover;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(48, 64);
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: fluid(32, 64);
+        align-items: center;
+
+        @include mq(md){
+            grid-template-columns: 5fr 7fr; 
+        }
+        
+        @include mq(sm){
+            grid-template-columns: 1fr;
+            gap: 2.4rem;
+        }
+    }
+
+    &__image {
+        @include img-auto-cover(75%);
+    }
+
+    &__phrases {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(4, 8);
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            
+            &::before {
+                content: '';
+                width: 0.6rem;
+                height: 0.6rem;
+                border-radius:50%; 
+                display: inline-block;
+                background: var(--clr-primary-main);
+                vertical-align: middle;
+                margin-right: 1.2rem;
+            }
+        }
+    }
+}
+
+.no-loc-map {
+    &__head {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.4rem;
+
+        @include mq(md){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__body {
+        position: relative;
+
+        .cont {
+            display: none;
+        }
+
+        .root_daum_roughmap {
+            width: 100%;
+        }
+
+        .root_daum_roughmap .wrap_map {
+            height: fluid(293, 493);
+        }
+    }
+}
+
+.no-loc-block {
+    padding-top: fluid(64, 128);
+
+    &__body {
+        padding-top: 2.4rem;
+        margin-top: 2.4rem;
+        border-top: 1px solid var(--clr-base-black);
+    }
+
+    &__detail {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mq(md){
+            flex-direction: column;
+        }
+
+        dl {
+            width: 50%;
+            padding: 1.6rem 0;
+            display: flex;
+            border-bottom: 1px solid var(--clr-gray-300);
+
+            @include mq(md){
+                width: 100%;
+            }
+
+            dt {
+                width: fluid(80, 120);
+                font-weight: 600;
+            }
+
+            dd {
+                flex: 1;
+            }
+
+            &.--full {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.no-loc-guide {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.4rem;
+
+        @include mq(lg){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq(md){
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+    }
+
+    &__item {
+
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        font-weight: 600;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    &__content {
+        background: var(--clr-gray-50);
+        height: 100%;
+        padding: 2.4rem;
+    }
+
+    &__desc {
+        padding-top: 2.4rem;
+        font-size: fluid(14, 16);
+
+        b {
+            display: inline-block;
+        }
+
+        &--detail {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+    }
+
+    &__line {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: fluid(20, 24);
+        height: fluid(20, 24);
+
+        &--1 {
+            background: #0253A5;
+            color: var(--clr-base-white);
+        }
+    }
+}

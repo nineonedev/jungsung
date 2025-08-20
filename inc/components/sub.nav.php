@@ -1,3 +1,5 @@
+<?php if ($CUR_PAGE_LIST[0] && count($CUR_PAGE_LIST[0]['pages']) > 1): ?>
+
 <nav class="no-sub-nav">
     <div class="no-sub-nav__container no-container-xl">
         <div class="swiper no-sub-nav__carousel" id="sub-nav-swiper">
@@ -21,3 +23,4 @@
         </div>
     </div>
 </nav>
+<?php endif; ?>

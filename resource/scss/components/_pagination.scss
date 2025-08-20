@@ -1,0 +1,84 @@
+@use '../abstract' as *;
+
+.no-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: fluid(8, 12);
+    font-size: fluid(14, 16);
+    user-select: none;
+
+    @include mq(md){
+        gap: 0.8rem;
+    }
+
+    &__link {
+        --size: #{fluid(32, 40)};
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: var(--size);
+        height: var(--size);
+        padding: 0 0.8rem;
+        border: 1px solid var(--clr-gray-300);
+        border-radius: 0.6rem;
+        background: var(--clr-base-white);
+        color: var(--clr-base-black);
+        line-height: 1;
+        transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+
+        &:hover {
+            background: var(--clr-gray-100);
+            border-color: var(--clr-gray-400);
+        }
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba( var(--clr-primary-rgb, 33, 150, 243), .25 );
+        }
+
+        &.--disabled {
+            color: var(--clr-gray-400);
+            border-color: var(--clr-gray-200);
+            background: var(--clr-gray-50);
+            pointer-events: none;
+            opacity: .7;
+        }
+    }
+
+    /* 숫자 버튼 */
+    &__link--num {
+        width: var(--size);
+        padding: 0; 
+        font-weight: 500;
+
+        &[aria-current="page"],
+        &.is-active {
+            background: var(--clr-primary-main);
+            border-color: var(--clr-primary-main);
+            color: var(--clr-base-white);
+        }
+
+        &.--ghost {
+            background: var(--clr-base-white);
+            color: var(--clr-gray-700);
+        }
+    }
+
+    &__link--arrow {
+        width: var(--size);
+        color: var(--clr-base-black);
+        border-color: transparent;   
+        background: transparent;
+
+        i {
+            font-size: fluid(14, 18);
+            line-height: 1;
+        }
+
+        &:hover {
+            background: var(--clr-gray-100);
+            border-color: var(--clr-gray-300);
+        }
+    }
+}

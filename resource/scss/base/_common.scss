@@ -1,5 +1,16 @@
 @use "../abstract" as *;
 
+
+.no-fm-noto {
+    font-family: var(--family-noto-sans-kr);
+}
+.no-fm-manrope {
+    font-family: var(--family-manrope);
+}
+.no-fm-pen {
+    font-family: var(--family-nanum-pen-script);
+}
+
 /* === Display === */
 .no-display-xs {
     font-size: var(--display-xs-fs);

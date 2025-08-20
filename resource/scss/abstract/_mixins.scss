@@ -98,28 +98,28 @@
 
 
 
-@mixin font-face($family, $local, $font-url, $weight){
+@mixin font-face($dir, $family, $local, $font-url, $weight){
     @font-face {
         font-family: #{$family};
-        src: local($local), func.font-url($font-url);
+        src: local("#{$dir}/#{$local}"), func.font-url("#{$dir}/#{$font-url}");
         font-weight: #{$weight};
         font-style: normal;
         font-display: swap;
     }
 }
 
-@mixin font-face-variant($family, $file, $weight, $local: null) {
+@mixin font-face-variant($dir, $family, $file, $weight, $local: null) {
     $suffix: map.get(var.$font-weight-suffix, $weight);
     $local-name: if($local == null, "#{$family} #{$suffix}", $local);
-    @include font-face($family, $local-name, $file, $weight);
+    @include font-face($dir, $family, $local-name, $file, $weight);
 }
 
-@mixin font-face-thin($family, $file, $local: null)       { @include font-face-variant($family, $file, 100, $local); }
-@mixin font-face-extralight($family, $file, $local: null) { @include font-face-variant($family, $file, 200, $local); }
-@mixin font-face-light($family, $file, $local: null)      { @include font-face-variant($family, $file, 300, $local); }
-@mixin font-face-regular($family, $file, $local: null)    { @include font-face-variant($family, $file, 400, $local); }
-@mixin font-face-medium($family, $file, $local: null)     { @include font-face-variant($family, $file, 500, $local); }
-@mixin font-face-semibold($family, $file, $local: null)   { @include font-face-variant($family, $file, 600, $local); }
-@mixin font-face-bold($family, $file, $local: null)       { @include font-face-variant($family, $file, 700, $local); }
-@mixin font-face-extrabold($family, $file, $local: null)  { @include font-face-variant($family, $file, 800, $local); }
-@mixin font-face-black($family, $file, $local: null)      { @include font-face-variant($family, $file, 900, $local); }
+@mixin font-face-thin($dir, $family, $file, $local: null)       { @include font-face-variant($dir, $family, $file, 100, $local); }
+@mixin font-face-extralight($dir, $family, $file, $local: null) { @include font-face-variant($dir, $family, $file, 200, $local); }
+@mixin font-face-light($dir, $family, $file, $local: null)      { @include font-face-variant($dir, $family, $file, 300, $local); }
+@mixin font-face-regular($dir, $family, $file, $local: null)    { @include font-face-variant($dir, $family, $file, 400, $local); }
+@mixin font-face-medium($dir, $family, $file, $local: null)     { @include font-face-variant($dir, $family, $file, 500, $local); }
+@mixin font-face-semibold($dir, $family, $file, $local: null)   { @include font-face-variant($dir, $family, $file, 600, $local); }
+@mixin font-face-bold($dir, $family, $file, $local: null)       { @include font-face-variant($dir, $family, $file, 700, $local); }
+@mixin font-face-extrabold($dir, $family, $file, $local: null)  { @include font-face-variant($dir, $family, $file, 800, $local); }
+@mixin font-face-black($dir, $family, $file, $local: null)      { @include font-face-variant($dir, $family, $file, 900, $local); }

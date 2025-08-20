@@ -2,7 +2,6 @@
     $subHero = $CUR_PAGE_LIST[0] ?? null; 
     if ($subHero) :
 ?>
-
 <section class="no-sub-hero">
     <div class="no-container-xl no-sub-hero__container">
         <div class="no-sub-hero__content">

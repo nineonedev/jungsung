@@ -1,0 +1,17 @@
+@use '../abstract' as *; 
+
+.no-pofol-case {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: fluid(48, 96) fluid(12, 24);
+
+        @include mq(lg){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq(md){
+            grid-template-columns: 1fr;
+        }
+    }
+}
