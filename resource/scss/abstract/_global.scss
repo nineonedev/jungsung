@@ -8,7 +8,12 @@
 
     --sub-nav-height: 7rem;  
 
-    @include mq(md){
+    --drawer-z-index: 1001; 
+
+    --tran-15: 0.15s ease-in-out; 
+    --tran-3: .3s ease-in-out; 
+
+    @include mq(lg){
         --header-height: 8rem; 
         --sub-nav-height: 5.6rem;
     }

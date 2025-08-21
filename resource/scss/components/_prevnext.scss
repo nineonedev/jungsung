@@ -1,0 +1,37 @@
+@use '../abstract' as *; 
+
+.no-prevnext {
+    border-top: 1px solid var(--clr-base-black);
+
+    &__block {
+        width: 100%;
+        text-align: left;
+        padding: 2.4rem;
+        padding-left: 0;
+        border-bottom: 1px solid var(--clr-gray-100);
+
+        @include mq(md) {
+            padding: 1.8rem 2.4rem 1.8rem 0;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+    }
+
+    &__link {
+        padding-left: 9.4rem;
+        position: relative;
+        display: inline-block;
+
+        @include mq(md){
+            padding-left: 4.6rem;    
+        }
+
+    }
+    &__label {
+        color: var(--clr-gray-600);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+    }
+}

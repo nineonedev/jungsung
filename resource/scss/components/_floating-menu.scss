@@ -1,0 +1,62 @@
+@use '../abstract' as *; 
+
+.no-floating-container {
+  display: grid;
+  grid-template-columns: 220px 1fr; // 좌측 메뉴 / 우측 본문
+  column-gap: clamp(24px, 3vw, 48px);
+  align-items: start;
+
+  @include mq(md){
+    grid-template-columns: 1fr;
+    column-gap: auto;
+  }
+}
+.no-floating-content {
+
+}
+
+.no-floating-menu {
+    width: 16rem;
+    padding-left: 2rem;
+    will-change: transform;
+    @include mq(md){
+        display: none;
+    }  
+
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(8, 12);
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-weight: 500;
+        color: var(--clr-gray-400);
+
+        &:hover {
+            color: var(--clr-base-black);
+        }
+
+        &--active {
+            color: var(--clr-primary-main);
+
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &::before {
+            content :'';
+            width: 0.6rem;
+            height: 0.6rem;
+            background: var(--clr-primary-main);    
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

@@ -114,6 +114,98 @@ function initSubNav(){
 
 }
 
+function initHeader(){
+    console.log('initHeader()');
+    
+    const header = document.getElementById('main-header');
+
+    if (!header) return; 
+
+    const nav = header.querySelector('.no-header__nav'); 
+
+    if(!nav) return; 
+
+    const tl = gsap.timeline({paused: true});
+
+    tl.to(header, {
+        height: () => {
+            return nav.offsetHeight + 'px'
+        },
+        ease: 'power3.inOut'
+    });
+
+    const onEnter = () => {
+        header.setAttribute('aria-expanded', true);
+        tl.play();
+    } 
+    
+    const onLeave = () => {
+        header.removeAttribute('aria-expanded');
+        tl.reverse(); 
+    }
+
+    nav.addEventListener('mouseenter', onEnter);
+    header.addEventListener('mouseleave', onLeave);
+
+    window.addEventListener('resize', (e) => {
+        if (window.innerWidth <= 1024) {
+            header.removeAttribute('style'); 
+            header.removeAttribute('aria-expanded');
+        }
+    });
+
+    const drawer = document.getElementById('main-drawer');
+    if(!drawer) return; 
+
+    const drawerOpenBtn = header.querySelector('.no-header__toggle')
+    const drawerCloseBtn = drawer.querySelector('.no-drawer__toggle');
+
+
+    const drawerTl = gsap.timeline({paused: true}); 
+    drawerTl.to(drawer, {
+        x: '0%',
+        opacity: 1,
+        ease:'power3.inOut'
+    })
+
+    const onOpen = () => {
+        document.body.classList.add('--hidden');
+        drawerTl.play();
+    }
+    
+    const onClose = () => {
+        document.body.classList.remove('--hidden');
+        drawerTl.reverse();
+    }
+
+    drawerOpenBtn.addEventListener('click', onOpen); 
+    drawerCloseBtn.addEventListener('click', onClose); 
+}
+
+function initFloatMenu(){
+    const container = document.querySelector('.no-floating-container');
+    const menu      = document.querySelector('.no-floating-menu');
+    if (!container || !menu) return;
+
+    const PIN_OFFSET = 100;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+        trigger: container,
+        start: `top+=${PIN_OFFSET} top`,
+        // 컨테이너 끝날 때까지 고정
+        end: 'bottom bottom',
+        pin: menu,
+        pinSpacing: false,        // ✅ 여백 생성 방지
+        anticipatePin: 1,         // 고정 시 살짝 앞당겨 레이아웃 튐 방지
+        invalidateOnRefresh: true // 리사이즈/이미지 로드 시 재계산
+    });
+
+    // 이미지 늦게 로드될 때 높이 변경 반영
+    window.addEventListener('load', () => ScrollTrigger.refresh());
+}
+
 function app(){
     console.log('app()');
     
@@ -122,6 +214,8 @@ function app(){
         initMainPofol(); 
         initMainResource();
         initSubNav(); 
+        initHeader(); 
+        initFloatMenu();
     });
 }
 app();

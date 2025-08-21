@@ -5,7 +5,7 @@
 <section class="no-sub-hero">
     <div class="no-container-xl no-sub-hero__container">
         <div class="no-sub-hero__content">
-            <h2 class="no-heading-xl no-sub-hero__title"><?= $subHero['title'] ?? '' ?></h2>
+            <h1 class="no-heading-xl no-sub-hero__title"><?= $subHero['title'] ?? '' ?></h1>
             <p class="no-sub-hero__desc"><?= $subHero['desc'] ?? '' ?></p>
         </div>
     </div>

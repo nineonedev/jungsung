@@ -21,6 +21,16 @@
     }
 }
 
+@mixin layer-up($z-index: 1) {
+    position: relative;
+    z-index: $z-index;
+}
+
+@mixin layer-down($z-index: 1) {
+    position: relative;
+    z-index: calc($z-index * -1);
+}
+
 @mixin pos-full() {
     position: absolute;
     top: 0;
@@ -51,6 +61,13 @@
 
 @mixin flex-center() {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin inline-center() {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }

@@ -1,0 +1,167 @@
+@use '../abstract' as *; 
+
+.no-service-hero {
+    position: relative;
+
+    &__content {
+        @include layer-up();
+        padding: 2.4rem
+    }
+
+    &__bg  {
+        @include pos-center(); 
+
+        img {
+            @include pos-center();
+            object-fit: cover;
+        }
+    }
+}
+
+
+.no-service-area {
+    padding-top: 0;
+    overflow: hidden;
+
+    &__list {
+        display: grid;
+        gap: var(--spacing-6xl, 6rem);
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 6fr 5fr;
+        align-items: center;
+        gap: var(--spacing-4xl, 3rem);
+        padding-block: var(--spacing-5xl, 2rem);
+        border-top: 1px solid var(--clr-border, #e5e7eb);
+
+        @include mq(lg){
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    &__content {
+        display: grid;
+        gap: var(--spacing-xl, 1.25rem);
+    }
+
+    &__title {
+    }
+
+    &__desc {
+        display: block;
+        font-weight: 600;
+        color: var(--clr-muted, #475569);
+    }
+
+    /* ==== 프로세스 리스트 ==== */
+    &__process {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: var(--spacing-lg, 1rem);
+    }
+
+    &__step {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: var(--spacing-md, .875rem);
+        align-items: start;
+        padding-left: .125rem;
+
+        // 단계 연결 라인 (타임라인 느낌)
+        &::after {
+        content: "";
+        position: absolute;
+        left: 18px; // __num 중앙 라인
+        top: 36px;
+        bottom: -10px;
+        width: 2px;
+        background: var(--clr-border, #e5e7eb);
+        }
+
+        // 마지막 항목은 라인 제거
+        &:last-child::after { display: none; }
+    }
+
+    &__num {
+        width: fluid(28, 36);
+        height: fluid(28, 36);
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-variant-numeric: tabular-nums;
+        background: var(--clr-primary-50, #eef2ff);
+        color: var(--clr-primary-700, #4338ca);
+        box-shadow: 0 1px 0 rgba(0,0,0,0.04) inset;
+        margin-top: .125rem;
+        font-size: fluid(12, 18);
+    }
+
+    &__label {
+        margin: 0;
+        font-weight: 700;
+        color: var(--clr-fg, #0f172a);
+    }
+
+    &__detail {
+        grid-column: 2 / -1;
+        margin: .25rem 0 0;
+        color: var(--clr-muted, #475569);
+    }
+
+    /* ==== 이미지 영역 ==== */
+    .no-service-picture {
+        position: relative;
+        display: grid;
+        place-items: center;
+        min-height: clamp(260px, 40vw, 520px);
+    }
+
+    &__image,
+    &__sub-image {
+        position: relative;
+
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+        }
+    }
+
+    &__image {
+        width: clamp(280px, 36vw, 520px);
+        aspect-ratio: 4 / 5;
+        z-index: 1;
+
+        @include mq(lg){
+            @include img-auto-cover(62.5%);
+            width: 100%;
+            aspect-ratio: unset;
+        }
+    }
+
+    &__sub-image {
+        position: absolute;
+        bottom: -10%;
+        left: -6%;
+        width: clamp(140px, 22vw, 260px);
+        aspect-ratio: 4 / 3;
+        z-index: 2;
+
+        @include mq(lg){
+            width: 50%;
+        }
+
+        img { border-radius: 0.875rem; }
+    }
+
+}

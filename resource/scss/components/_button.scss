@@ -31,7 +31,20 @@
         font-size: var(--body-md-fs);
     }
 
+    &--list {
+        width: 9.6rem;
+        height: 4rem;
+    }
+
     /* === Theme === */
+    &--white {
+        background: var(--clr-base-white);
+        color: var(--clr-primary-main);
+
+        &:hover {
+            background: var(--clr-primary-50);
+        } 
+    }
 
     &--primary {
         background: var(--clr-primary-main);

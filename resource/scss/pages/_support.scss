@@ -1,0 +1,44 @@
+@use '../abstract' as *;
+
+.no-resource {
+    $root: &; 
+    background: var(--clr-gray-50);
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: fluid(48, 96) fluid(12, 24);
+
+        @include mq(lg){
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mq(md){
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        &:hover{
+            #{$root}__image {
+                border-color: var(--clr-base-black);
+            }
+        }
+    }
+    
+    &__image {
+        background: var(--clr-base-white);
+        @include img-auto-cover(135%);
+        border: 1px solid transparent;
+    }
+
+    &__title {
+        font-size: fluid(16, 20);
+        font-weight: 600;
+        padding-top: 2.4rem;
+    }
+
+    &__link {
+        
+    }
+}

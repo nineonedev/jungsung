@@ -12,10 +12,10 @@
             <?php include_once $STATIC_ROOT . '/inc/components/sub.hero.php'; ?>
             <?php include_once $STATIC_ROOT . '/inc/components/sub.nav.php'; ?>
             
-            <section class="no-section-xl no-board no-resource">
+            <section class="no-section-xl no-pofol-case no-board">
                 <div class="no-container-xl">
                     <h2 class="no-heading-xl --tac">
-                        자료실
+                        공지사항
                     </h2>
 
                     
@@ -55,20 +55,55 @@
                             </div>
                         </div>
 
-                        <ul class="no-resource__list no-pd-3xl--t">
-                            <?php for ($i = 0; $i < 12; $i ++): ?>
-                            <li class="no-resource__item">
-                                <article class="no-resource__block">
-                                    <a href="no-resource__link">
-                                        <figure class="no-resource__image">
-                                            <img src="/resource/images/main/doc.jpg" alt="">
-                                        </figure>
-                                        <h3 class="no-resource__title">공동주택 관리규약 준칙</h3>
-                                    </a>
-                                </article>
-                            </li>
-                            <?php endfor; ?>
-                        </ul>
+                        <div class="no-table no-pd-2xl--t">
+                            <div class="no-table__inner">
+                                <table class="no-table__self">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="width: 10%">번호</th>
+                                            <th scope="col" style="width: 60%" class="--tal">제목</th>
+                                            <th scope="col" style="width: 15%">조회수</th>
+                                            <th scope="col" style="width: 15%">등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="--tac">
+                                        <tr>
+                                            <td>
+                                                <span>1</span>
+                                            </td>
+                                            <td class="no-table__title --tal">
+                                                <a href="" class="no-table__link">
+                                                    <strong class="no-table__link-text">하절기 시설 점검 안내</strong>
+                                                </a>
+                                            </td>
+                                            <td class="no-table__attr">
+                                                <span data-label="조회수">231</span>
+                                            </td>
+                                            <td class="no-table__attr">
+                                                <span data-label="등록일">2025-08-13</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="no-table__pin">
+                                                    <i class="fa-sharp fa-solid fa-megaphone"></i>
+                                                </span>
+                                            </td>
+                                            <td class="no-table__title --tal">
+                                                <a href="" class="no-table__link">
+                                                    <strong class="no-table__link-text">추석 연휴 경비 강화 계획</strong>
+                                                </a>
+                                            </td>
+                                            <td class="no-table__attr">
+                                                <span data-label="조회수">231</span>
+                                            </td>
+                                            <td class="no-table__attr">
+                                                <span data-label="등록일">2025-08-13</span>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
                         <div class="no-pd-5xl--t">
                             <nav class="no-pagination">
