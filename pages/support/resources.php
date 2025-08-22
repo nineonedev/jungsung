@@ -13,7 +13,7 @@
             <?php include_once $STATIC_ROOT . '/inc/components/sub.nav.php'; ?>
             
             <section class="no-section-xl no-board no-resource">
-                <div class="no-container-xl">
+                <div class="no-container-xl" <?= $AOS_FADE_UP ?>>
                     <h2 class="no-heading-xl --tac">
                         자료실
                     </h2>

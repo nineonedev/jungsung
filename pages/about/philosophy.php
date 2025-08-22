@@ -14,7 +14,7 @@
             
             <section class="no-section-xl no-philo-intro">
                 <div class="no-container-xl">
-                    <div class="no-philo-intro__head --tac">
+                    <div class="no-philo-intro__head --tac" <?= $AOS_FADE_UP ?>>
                         <h2 class="no-heading-xl">경영이념</h2>
                         <p class="--wrap no-pd-xl--t">
                             도전·열정·혁신이라는 경영방침 아래 건물관리 전문기업(Building Management Company)으로 성장하여 
@@ -22,7 +22,7 @@
                             물이 흐르는 방향(하수기)으로 따라 내려가듯 고객과 함께 가는 SOYOU가 될 것입니다.
                         </p>
                     </div>
-                    <ul class="no-philo-intro__list no-pd-4xl--t">
+                    <ul class="no-philo-intro__list no-pd-4xl--t" <?= $AOS_FADE_UP ?>>
                         <li class="no-philo-intro__item">
                             <div class="no-philo-intro__box">
                                 <div class="no-philo-intro__icon">
@@ -97,14 +97,14 @@
 
             <section class="no-section-xl no-philo-service">
                 <div class="no-container-lg no-philo-service__container">
-                    <div class="no-philo-service__head">
+                    <div class="no-philo-service__head" <?= $AOS_FADE_UP ?>>
                         <h2 class="no-heading-xl">
                             최상의 건물관리 토탈서비스 제공
                         </h2>
                     </div>
                     <div class="no-philo-service__body no-pd-5xl--t">
                         <ul class="no-philo-service__list">
-                            <li class="no-philo-service__item">
+                            <li class="no-philo-service__item" <?= $AOS_FADE_UP ?>>
                                 <div class="no-philo-service__image">
                                     <img src="/resource/images/sub/philo_1.jpg" alt="">
                                 </div>
@@ -118,7 +118,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="no-philo-service__item">
+                            <li class="no-philo-service__item" <?= $AOS_FADE_UP ?>>
                                 <div class="no-philo-service__image">
                                     <img src="/resource/images/sub/philo_2.jpg" alt="">
                                 </div>
@@ -131,7 +131,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="no-philo-service__item">
+                            <li class="no-philo-service__item" <?= $AOS_FADE_UP ?>>
                                 <div class="no-philo-service__image">
                                     <img src="/resource/images/sub/philo_3.jpg" alt="">
                                 </div>

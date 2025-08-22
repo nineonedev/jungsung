@@ -15,7 +15,7 @@
             <section class="no-section-xl no-ceo-msg">
                 <div class="no-container-xl">
                     <div class="no-ceo-msg__div">
-                        <div class="no-ceo-msg__content">
+                        <div class="no-ceo-msg__content" <?= $AOS_FADE_UP ?>>
                             <h2 class="no-ceo-msg__title no-heading-xl">
                                 정성을 다하는 서비스, <br> 믿음을 주는 파트너
                             </h2>
@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="no-ceo-msg__image">
+                        <div class="no-ceo-msg__image" <?= $AOS_FADE_UP ?>>
                             <img src="/resource/images/sub/message.jpg" alt="">
                         </div>
                     </div>

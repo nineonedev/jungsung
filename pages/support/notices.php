@@ -25,7 +25,7 @@
                         <input type="hidden" name="column" value="title">
                         <input type="hidden" name="search" value="">
 
-                        <div class="no-board__filter no-pd-4xl--t">
+                        <div class="no-board__filter no-pd-4xl--t" <?= $AOS_FADE_UP ?>>
                             <span class="no-board__total">전체 <em>301</em>건</span>
                             <div class="no-board__search">
                                 <div class="no-form-select">
@@ -55,7 +55,7 @@
                             </div>
                         </div>
 
-                        <div class="no-table no-pd-2xl--t">
+                        <div class="no-table no-pd-2xl--t" <?= $AOS_FADE_UP ?>>
                             <div class="no-table__inner">
                                 <table class="no-table__self">
                                     <thead>

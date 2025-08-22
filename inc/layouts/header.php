@@ -37,10 +37,10 @@
                 <?php endif; ?>
             </nav>
             <div class="no-header__action">
-                <button type="button" class="no-btn no-btn--primary no-btn--sm">
+                <a href="/pages/inquiry/index.php" class="no-btn no-btn--primary no-btn--sm">
                     <span>견적문의</span>
                     <i class="fa-light fa-arrow-right"></i>
-                </button>
+                </a>
                 <button type="button" class="no-header__toggle">
                     <i class="fa-regular fa-bars"></i>
                 </button>

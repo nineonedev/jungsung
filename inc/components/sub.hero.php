@@ -1,6 +1,6 @@
 <?php
     $subHero = $CUR_PAGE_LIST[0] ?? null; 
-    if ($subHero) :
+    if ($subHero || defined('shouldHero')) :
 ?>
 <section class="no-sub-hero">
     <div class="no-container-xl no-sub-hero__container">

@@ -45,6 +45,7 @@
 
     &__logo {
         @include flex-center(); 
+        width: fluid(130, 180);
     }
     
     &__action {

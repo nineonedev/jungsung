@@ -13,7 +13,7 @@
             <?php include_once $STATIC_ROOT . '/inc/components/sub.nav.php'; ?>
             
             <section class="no-section-xl no-board-detail">
-                <div class="no-container-xl">
+                <div class="no-container-xl" <?= $AOS_FADE_UP ?>>
                     <h2 class="no-heading-lg no-board-detail__headline">
                         공지사항
                     </h2>

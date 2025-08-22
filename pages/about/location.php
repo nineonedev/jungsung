@@ -14,7 +14,7 @@
             
             <section class="no-section-xl no-loc">
                 <div class="no-container-xl">
-                    <div class="no-loc-map__head">
+                    <div class="no-loc-map__head" <?= $AOS_FADE_UP ?>>
                         <h2 class="no-heading-xl">찾아오시는 길</h2>
                         <p class="no-loc-map__desc">
                             정성종합관리(주)는 언제나 고객 여러분의 편의를 최우선으로 생각합니다.
@@ -24,7 +24,7 @@
                             쾌적한 환경에서 맞이할 수 있도록 항상 준비하고 있겠습니다.
                         </p>
                     </div>
-                    <div class="no-loc-map__body no-pd-4xl--t">
+                    <div class="no-loc-map__body no-pd-4xl--t" <?= $AOS_FADE_UP ?>>
                         <div class="no-loc-map__view">
                             <div id="daumRoughmapContainer1755671992417" class="root_daum_roughmap root_daum_roughmap_landing"></div>
                             <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
@@ -39,7 +39,7 @@
                         </div>
                     </div>
 
-                    <div class="no-loc-block">
+                    <div class="no-loc-block" <?= $AOS_FADE_UP ?>>
                         <div class="no-loc-block__head">
                             <h3 class="no-heading-xs">기본 정보</h3>
                             <div class="no-loc-block__body">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
 
-                    <div class="no-loc-block">
+                    <div class="no-loc-block" <?= $AOS_FADE_UP ?>>
                         <div class="no-loc-block__head">
                             <h3 class="no-heading-xs">교통 안내</h3>
                         </div>

@@ -26,7 +26,7 @@
                 <div class="no-floating-content">
                     <section class="no-section-lg">
                         <div class="no-container-xl">
-                            <div class="no-service-hero no-section-xl">
+                            <div class="no-service-hero no-section-xl" <?= $AOS_FADE_UP ?>>
                                 <div class="no-service-hero__content --tac">
                                     <h2 class="no-service-hero__title no-heading-xl">
                                         사업영역
@@ -128,7 +128,7 @@
                         <div class="no-container-xl">
                             <ul class="no-service-area__list">
                             <?php foreach ($services as $index => $service): ?>
-                                <li class="no-service-area__item" id="<?=$service['key']?>">
+                                <li class="no-service-area__item" id="<?=$service['key']?>" <?= $AOS_FADE_UP ?>>
                                     <div class="no-service-area__content">
                                         <h3 class="no-service-area__title no-heading-lg">
                                             <?= $service['title'] ?>

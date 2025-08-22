@@ -3,7 +3,7 @@
 :root {
     --gutter: 2.4rem;
 
-    --header-height: 10rem;
+    --header-height: 8rem;
     --header-z-index: 1000;
 
     --sub-nav-height: 7rem;  
@@ -14,7 +14,7 @@
     --tran-3: .3s ease-in-out; 
 
     @include mq(lg){
-        --header-height: 8rem; 
+        --header-height: 6.4rem; 
         --sub-nav-height: 5.6rem;
     }
 }

@@ -1,1 +1,70 @@
 @use '../abstract' as *;
+
+:root {
+  --gt-size: 48px;   // 버튼 크기
+  --gt-gap:  20px;   // 화면 모서리와 간격
+}
+
+.no-gototop {
+  position: fixed;
+  inset-inline-end: calc(var(--gt-gap) + env(safe-area-inset-right));
+  inset-block-end: calc(var(--gt-gap) + env(safe-area-inset-bottom));
+  z-index: 999;
+  pointer-events: none; // 숨김일 때 클릭 방지
+
+  &__btn {
+    width: var(--gt-size);
+    height: var(--gt-size);
+    border: none;
+    border-radius: 999px;
+
+    background: var(--clr-primary-main);
+    color: var(--clr-base-white);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    cursor: pointer;
+    pointer-events: auto;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    letter-spacing: .02em;
+
+    span {
+      font-size: 12px;
+    }
+
+    // 애니메이션
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .18s ease, transform .18s ease, background .2s ease;
+
+    &:hover {
+      background: var(--clr-primary-hover);
+    }
+
+    &:active {
+      transform: translateY(14px) scale(.97);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--clr-primary-400);
+      outline-offset: 3px;
+    }
+  }
+
+  // 나타났을 때
+  &.is-visible .no-gototop__btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  // 모션 최소화 환경
+  @media (prefers-reduced-motion: reduce) {
+    &__btn {
+      transition: none;
+    }
+  }
+}

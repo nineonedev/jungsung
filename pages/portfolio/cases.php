@@ -14,19 +14,9 @@
             
             <section class="no-section-xl no-pofol-case no-board">
                 <div class="no-container-xl">
-                    <h2 class="no-heading-xl --tac">
+                    <h2 class="no-heading-xl --tac" <?= $AOS_FADE_UP ?>>
                         숫자와 사례로 확인하는 신뢰의 기록
                     </h2>
-
-                    <div class="no-board__filter">
-                        <span>전체 301건</span>
-                        <div>
-                            <select name="" id=""></select>
-                            <div class="no-form-control">
-                                <input type="password" name="" id="">
-                            </div>
-                        </div>
-                    </div>
 
                     <form method="get">
                         <input type="hidden" name="page" value="">
@@ -34,6 +24,37 @@
                         <input type="hidden" name="column" value="title">
                         <input type="hidden" name="search" value="">
 
+                            
+                        <div class="no-board__filter no-pd-4xl--t" <?= $AOS_FADE_UP ?>>
+                            <span class="no-board__total">전체 <em>301</em>건</span>
+                            <div class="no-board__search">
+                                <div class="no-form-select">
+                                    <select name="column" id="column" class="no-form-select__input">
+                                        <option value="title">제목</option>
+                                        <option value="content">내용</option>
+                                    </select>
+                                    <div class="no-form-select__icon">
+                                        <i class="fa-light fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="no-form-control no-form-control--search">
+                                    <label for="search">
+                                        <input 
+                                            type="search" 
+                                            name="search" 
+                                            id="search" 
+                                            placeholder="검색어를 입력해주세요."
+                                            class="no-form-control__input no-form-control__input--search"
+                                        >
+                                        <button type="submit">
+                                            <i class="fa-light fa-magnifying-glass"></i>
+                                        </button>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </div>
+                        
 
                         <?php
                         $POFOL_DATA = [
@@ -74,7 +95,7 @@
                             $location = htmlspecialchars($row['location'], ENT_QUOTES);
                             $area = htmlspecialchars($row['area'], ENT_QUOTES);
                             ?>
-                            <li class="no-main-pofol__item">
+                            <li class="no-main-pofol__item" <?= $AOS_FADE_UP ?>>
                                 <a href="#" class="no-main-pofol__link">
                                     <figure class="no-main-pofol__image no-main-pofol__image--case">
                                         <img src="<?= $img ?>" alt="<?= $title ?> 전경">

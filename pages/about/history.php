@@ -14,7 +14,7 @@
             
             <section class="no-section-xl">
                 <div class="no-container-xl">
-                    <div class="no-history__head">
+                    <div class="no-history__head" <?= $AOS_FADE_UP ?>>
                         <h2 class="no-heading-xl">
                            독자적 기술과 노하우로 <br>
                            건물종합관리를 이끄는 <em class="--highlight no-fm-manrope">Leading Company</em> 
@@ -23,10 +23,10 @@
                     <div class="no-history__body">
                         <ul class="no-history__div">
                             <li class="no-history__block">
-                                <div class="no-history__image">
+                                <div class="no-history__image" <?= $AOS_FADE_UP ?>>
                                     <img src="/resource/images/sub/history_1.jpg" alt="">
                                 </div>
-                                <div class="no-history__content">
+                                <div class="no-history__content" <?= $AOS_FADE_UP ?>>
                                     <h3 class="no-history__sub-title no-heading-lg no-fm-manrope">Foundation</h3>
                                     <ul class="no-history__list">
                                         <li class="no-history__item">
@@ -58,10 +58,10 @@
                                 </div>
                             </li>
                             <li class="no-history__block">
-                                <div class="no-history__image">
+                                <div class="no-history__image" <?= $AOS_FADE_UP ?>>
                                     <img src="/resource/images/sub/history_2.jpg" alt="">
                                 </div>
-                                <div class="no-history__content no-pt-lg--t">
+                                <div class="no-history__content no-pt-lg--t" <?= $AOS_FADE_UP ?>>
                                     <h3 class="no-history__sub-title no-heading-lg no-fm-manrope">Take Off</h3>
                                     <ul class="no-history__list">
                                         <li class="no-history__item">
@@ -88,10 +88,10 @@
                                 </div>
                             </li>
                             <li class="no-history__block">
-                                <div class="no-history__image">
+                                <div class="no-history__image" <?= $AOS_FADE_UP ?>>
                                     <img src="/resource/images/sub/history_3.jpg" alt="">
                                 </div>
-                                <div class="no-history__content no-pt-lg--t">
+                                <div class="no-history__content no-pt-lg--t" <?= $AOS_FADE_UP ?>>
                                     <h3 class="no-history__sub-title no-heading-lg no-fm-manrope">Growth</h3>
                                     <ul class="no-history__list">
                                         <li class="no-history__item">

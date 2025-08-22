@@ -2,6 +2,7 @@
 
 
 .no-main-hero {
+    $root: &; 
 
     &__container {
         height: 100%; 
@@ -12,6 +13,24 @@
 
     &__slide {
         overflow: hidden;
+
+        &.swiper-slide-active {
+            #{$root}__title {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            #{$root}__sub-title {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            #{$root}__cta {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
     }
 
     &__image {
@@ -42,18 +61,31 @@
 
     &__title {
         order: 2;
-        font-size: fluid(41, 82);
+        font-size: fluid(32, 82);
         line-height: 1.333;
         font-weight: 700;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s .5s ease-in-out;
+        transform: translateY(15%);
+        
     }
 
     &__sub-title {
         order: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s .25s ease-in-out;
+        transform: translateY(50%);
     }
 
     &__cta {
         order: 3;
         padding-top: fluid(24, 48);
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s .75s ease-in-out;
+        transform: translateY(50%);
     }
 
     &__control {
@@ -121,11 +153,15 @@
         margin: 0;
         color: var(--clr-base-white);
         font-size: 2rem;
-        width: 4rem;
-        height: 4rem;
+        width: fluid(28, 40);
+        height: fluid(28, 40);
         @include flex-center(); 
         &:hover{
             background: var(--clr-gray-900);
+        }
+
+        i {
+            font-size: fluid(14, 20);
         }
 
         &::after{
@@ -157,13 +193,20 @@
     
     &__card {
         background: var(--clr-background-philo);
-        padding: fluid(16, 48) fluid(24, 80) fluid(24, 80);
+        padding: fluid(32, 48) fluid(24, 80) fluid(24, 80);
         @include flex-center(); 
         flex-direction: column;
         text-align: center;
+        width: 100%;
 
         gap: 2.4rem;
 
+    }
+
+    &__char {
+        margin: 0 auto;
+        width: 100%;
+        max-width: fluid(64, 128);
     }
 
     &__line {
@@ -538,7 +581,6 @@
     &__div {
         display: flex;
         gap: 2.4rem;
-
         @include mq(md){
             flex-direction: column;
             gap: var(--spacing-4xl);
@@ -624,11 +666,12 @@
 
 .no-main-resource {
     $root: &; 
+    padding-top: 0;
 
     overflow: hidden;
 
     &__carousel {
-        overflow: visible;
+        // overflow: visible;
     }
 
     &__link {

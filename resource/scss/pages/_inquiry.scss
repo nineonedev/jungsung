@@ -1,0 +1,30 @@
+@use '../abstract' as *; 
+
+.no-inquiry {
+    
+    &__group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.2rem 2.4rem;
+
+        @include mq(md){
+            gap: 2.4rem;
+        }
+    }
+
+    &__form {
+        padding: fluid(16, 64) fluid(24, 80);
+        background: var(--clr-gray-50);
+    }
+
+    &__agree {
+        padding: 2.4rem;
+        border: 1px solid var(--clr-gray-300);
+        background: var(--clr-gray-100);
+        font-size: fluid(12, 14);
+        border-radius: 0.6rem;
+
+        overflow-y: auto;
+        max-height: 12rem;
+    }
+}

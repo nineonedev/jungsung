@@ -54,12 +54,18 @@
                 <div class="no-footer__rights">
                     <small class="no-footer__copy">Copyright &copy; 2025 정성종합관리 주식회사. All rights reserved.</small>
                     <div class="no-footer__legal">
-                        <a href="">개인정보처리방침</a>
-                        <a href="">이용약관</a>
+                        <a href="/pages/legal/privacy.php">개인정보처리방침</a>
+                        <a href="/pages/legal/terms.php">이용약관</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
+<div id="gototop" class="no-gototop">
+    <button class="no-gototop__btn" type="button">
+        <span>TOP</span>
+    </button>
+</div>
 
