@@ -79,6 +79,19 @@
         
     }
 
+    &__admin {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.4rem;
+      color: var(--clr-primary-main);
+      font-weight: 600;
+
+      i {
+        font-size: fluid(16, 20);
+      }
+    }
+
     &__date {
         font-size: 1.4rem;
         color: var(--clr-gray-500);
@@ -86,6 +99,12 @@
 
     &__body {
         padding: fluid(18, 36) fluid(16, 24);
+
+        &.--comment {
+          background: var(--clr-primary-50);
+          border: 1px solid var(--clr-primary-main);
+          margin-bottom: 2rem;
+        }
 
         @include mq(md){
             padding: 2.4rem 0;

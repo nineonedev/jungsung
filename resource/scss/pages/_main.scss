@@ -675,9 +675,9 @@
     }
 
     &__link {
-        &:hover #{$root}__image {
-            outline: 1px solid var(--clr-base-black);
-        }
+        // &:hover #{$root}__image {
+        //     outline: 1px solid var(--clr-base-black);
+        // }
     }
 
     &__image { 

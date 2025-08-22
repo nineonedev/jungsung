@@ -1,30 +1,59 @@
 function initMainHero(){
     console.log('initMainHero()');
     const SELECTOR = '#main-hero-swiper';
-
     const el = document.querySelector(SELECTOR);
-    if (!el) return; 
-    
+    if (!el) return;
+
+    // --- 유틸 ---
+    function pad2(n) { return String(n).padStart(2, '0'); }
+
+    // --- 프랙션 요소를 '먼저' 잡는다 (TDZ 회피) ---
+    const fraction = el.querySelector('.no-main-hero__fraction');
+    const curEl    = fraction ? fraction.querySelector('[data-role="current"]') : null;
+    const totalEl  = fraction ? fraction.querySelector('[data-role="total"]')  : null;
+
+    // 실제 슬라이드 개수(복제 전 원본만 카운트)
+    const wrapper = el.querySelector('.swiper-wrapper');
+    const total   = wrapper ? wrapper.querySelectorAll(':scope > .swiper-slide').length : 0;
+
+    if (totalEl) totalEl.textContent = pad2(total || 0);
+
+    // 1장 이하이면 컨트롤 감춤 + 루프/오토플레이 비활성
+    if (total <= 1) {
+        const control = el.querySelector('.no-main-hero__control');
+        if (control) control.style.display = 'none';
+    }
+
+    // --- 업데이트 함수(선언문이라 호이스팅되지만, 가독성상 위에 둠) ---
+    function updateFraction(s) {
+        if (!fraction || !curEl || !totalEl || total === 0) return;
+        // loop:true일 때는 realIndex 사용 (0-based)
+        const current = typeof s.realIndex === 'number'
+        ? s.realIndex + 1
+        : ((s.activeIndex % total) + 1);
+        curEl.textContent = pad2(current);
+        totalEl.textContent = pad2(total);
+    }
+
+    // --- 이제야 스와이퍼 생성 ---
     const swiper = new Swiper(el, {
-        loop: true, 
-        // effect: 'fade',
-        // fadeEffect: { crossFade: true },
-        speed: 1200, // 부드러운 전환 속도
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: true 
-        },
+        loop: total > 1,
+        speed: 1200,
+        autoplay: total > 1 ? { delay: 2000, disableOnInteraction: true } : false,
         pagination: {
-            type: "bullets",
-            el: ".no-main-hero__pagination",
-            clickable: true,
+        type: 'bullets',
+        el: el.querySelector('.no-main-hero__pagination'),
+        clickable: true
         },
         navigation: {
-            nextEl: ".no-main-hero__button--next",
-            prevEl: ".no-main-hero__button--prev",
+        nextEl: el.querySelector('.no-main-hero__button--next'),
+        prevEl: el.querySelector('.no-main-hero__button--prev')
         },
+        on: {
+        init(s) { updateFraction(s); },
+        slideChange(s) { updateFraction(s); }
+        }
     });
-    
 }
 
 function initMainPofol(){

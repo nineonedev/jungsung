@@ -35,7 +35,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 
+
 <meta name="autocomplete" content="off" />
 <meta name="keywords" content="<?=$NO_META_KEYWORDS?>">
 <meta name="description" content="<?=$NO_META_DESCRIPTION?>">
@@ -49,7 +49,6 @@
 <meta property="og:title" content="<?=$NO_META_OG_TITLE?><?=$NO_STATIC_SUBTITLE?>">
 <meta property="og:description" content="<?=$NO_META_OG_DESCRIPTION?>">
 <link rel="shortcut icon" href="<?=$NO_META_SHORTCUT_ICON?>">
--->
 
 <link rel="icon" type="image/png" href="<?= $FAVICON_PATH ?>/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="<?= $FAVICON_PATH ?>/favicon.svg" />

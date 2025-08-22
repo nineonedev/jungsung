@@ -33,5 +33,18 @@
         top: 0;
         left: 0;
         right: auto;
+        font-size: fluid(14, 16);
+
+        @include mq(md){
+            font-size: 1.2rem;
+        }
+    }
+
+    &__title {
+        font-size: fluid(14, 16);
+
+        @include mq(md){
+            font-size: 1.2rem;
+        }
     }
 }
